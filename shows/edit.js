@@ -24,10 +24,12 @@ function(doc, req) {
     data.title = doc.title;
     data.body = doc.body;
     data.tags = doc.tags.join(", ");
+    data.show = doc.show;
   } else {
     data.doc = JSON.stringify({
       type : "post",
-      format : "markdown"
+      format : "markdown",
+      show : true,
     });
   }
 
