@@ -21,7 +21,7 @@ function(doc, req) {
   
   if (doc) {
     data.doc = JSON.stringify(doc);
-    data.title = doc.title;
+    data.title = doc.title.replace("\"","&quot;");
     data.body = doc.body;
     data.tags = doc.tags.join(", ");
   } else {
